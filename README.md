@@ -39,7 +39,7 @@ Plugin is still **WIP**
 ## Installation
 
 ```
-cordova plugin add cordova-plugin-barcodescanner
+cordova plugin add https://github.com/kashi549/cordova-barcodescanner-plugin.git
 ```
 Or if you want to use the development version (nightly build), which maybe not stable!:
 
