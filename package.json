@@ -32,7 +32,7 @@
     "build": "npm run jsdoc",
     "jsdoc": "jsdoc -c jsdoc.json && jsdoc2md www/barcodescanner.js | sed s/barcodeScannerPlugin/cordova.plugins.barcodeScanner/g | sed s/barcodeScannerPlugin/cordova.plugins.barcodeScanner/g > PLUGIN_USAGE.MD",
     "pretest": "rm -rf tmp && mkdir -p tmp && cd tmp && git clone https://github.com/simpligility/maven-android-sdk-deployer.git && cd maven-android-sdk-deployer/ && mvn install -P 6.0 && ls ~/.m2/repository/android/android/",
-    "test": "cd tmp && git clone https://github.com/hypery2k/cordova-demo-app.git && cd cordova-demo-app && npm install && npm run build && cordova platform add ${PLATFORM} && cordova plugin add cordova-plugin-compat && cordova build && cordova plugin add ../.. && cordova build",
+    "test": "cd tmp && git clone https://github.com/hypery2k/cordova-demo-app.git && cd cordova-demo-app && npm install && npm run build && cordova platform add ${PLATFORM} && cordova build && cordova plugin add ../.. && cordova build",
     "posttest": "npm run jsdoc",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "changelog:add": "git add plugin.xml && git add CHANGELOG.md && git commit -m 'chore(changelog): Updated CHANGELOG.md'",
